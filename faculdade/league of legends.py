@@ -2,7 +2,7 @@ class Campeao:
     def __init__(self, nome, vida, defesa):
         self.nome = nome
         self.__vida = vida
-        self.ataque = defesa
+        self.defesa = defesa
 
     def atacar(self):
         print(f"{self.nome} ataca causando {self.ataque} de dano.")
