@@ -1,8 +1,8 @@
 class Campeao: 
-    def __init__(self, nome, vida, ataque):
+    def __init__(self, nome, vida, defesa):
         self.nome = nome
         self.__vida = vida
-        self.ataque = ataque
+        self.ataque = defesa
 
     def atacar(self):
         print(f"{self.nome} ataca causando {self.ataque} de dano.")
