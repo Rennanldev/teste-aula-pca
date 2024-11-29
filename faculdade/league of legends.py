@@ -1,8 +1,8 @@
 class Campeao: 
-    def __init__(self, nome, vida, defesa):
+    def __init__(self, nome, vida, ataque):
         self.nome = nome
         self.__vida = vida
-        self.defesa = defesa
+        self.ataque= ataque
 
     def atacar(self):
         print(f"{self.nome} ataca causando {self.ataque} de dano.")
@@ -32,8 +32,6 @@ class Garen(Campeao):
     def usar_golpe_demaciano(self):
         print(f"{self.nome} usa Golpe Demaciano, causando {self.golpe_demaciano} de dano!")
 
-
-# Função para escolher o ataque
 def escolher_ataque(campeao):
     if isinstance(campeao, Ashe):
         ataque = input("Escolha o ataque: '1' para ataque básico ou '2' para Flecha Congelante: ")
@@ -52,12 +50,9 @@ def escolher_ataque(campeao):
             campeao.usar_golpe_demaciano()
         else:
             print("Opção inválida.")
-
-# Criando campeões específicos com habilidades próprias
 ashe = Ashe("Ashe", 500, 60, 120)
 garen = Garen("Garen", 800, 70, 150)
 
-# Exemplo de uso com o usuário escolhendo os ataques
 print("Ataques para Ashe:")
 escolher_ataque(ashe)
 print("\nAtaques para Garen:")
